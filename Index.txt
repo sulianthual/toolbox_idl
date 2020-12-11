@@ -1,0 +1,213 @@
+toolbox_idl
+
+###### Table of Contents:
+
+
+### toolbox_idl_assimilation: data assimilation
+### toolbox_idl_base: basis for other functions
+### toolbox_idl_bin: binary files handling
+### toolbox_idl_complex: complex numbers
+### toolbox_idl_graphics: graphics handling
+### toolbox_idl_lodca: analysis of LODCA model 
+### toolbox_idl_mvert: ocean vertical modes
+### toolbox_idl_ncdf: netcdf files handling
+### toolbox_idl_oceano: ocean data manipulation
+### toolbox_idl_stats: statistical analysis
+### toolbox_idl_wavelets: wavelets analysis
+
+
+###### Methods by Topics: 
+
+
+### toolbox_idl_assimilation: data assimilation
+myenkfana.pro: Ensemble Kalman filter (EnKF) analysis step
+myenkfrep.pro: EnKF representor method
+myhinterp2d.pro: EnKF Observation Operator 
+mypertuni.pro: uniform perturbation of observations
+
+
+### toolbox_idl_base: basis for other functions
+mydims.pro: array dimensions
+myfindcoord.pro: index of closest value to desired
+mygoodstring.pro: remove string white spaces
+mygrid.pro: create 1D grid
+mygridstep.pro: gridstep of a grid
+myinf.pro: infinity number
+myisofrom2d.pro: isocontour coordinates from 2d field
+myloopfunc.pro: iterate function on all array dimensions
+mylooppro.pro: iterate procedure on all array dimensions
+mymax.pro: array max (accepts bad values)
+mymin.pro: array min (accepts bad values)
+mymultby.pro: multiply all array elements
+myNaN.pro: NaN number
+myndims.pro: array number of dimensions
+mypartfromrange.pro: extract part of a field given a range
+mypart.pro: slice array
+mypi.pro: pi number
+myreform1.pro: arrange array dimensions to (X,time)
+myreform2.pro: revert myreform1
+myscalar.pro: array first element
+mysign.pro: return sign for each element of array
+mysize.pro: number of elements in array
+myswitch.pro: swap dimensions of multidimensional array
+myvirtualsubscript.pro: interpolation grid1 to grid2
+mywhereminmax.pro: min and max index of a field
+
+
+### toolbox_idl_bin: binary files handling
+# ( No additionnal toolbox is needed )
+myreadbin.pro: reads from binary file
+mywritebin.pro: writes into binary file
+
+
+### toolbox_idl_complex: complex numbers
+myatphase.pro: rotate complex array
+mycomplexampl.pro: complex array magnitude
+mycomplexphase.pro: complex array phase
+
+
+### toolbox_idl_graphics: graphics handling
+# ( No additionnal toolbox is needed )
+myanimate.pro: animate contours of a field
+myaxis.pro: draw axis over an existing graphic
+mycolor.pro: set graph colors
+mycontour.pro: (nice) contour graphic 
+mygraph.pro: set graphic configuration and settings
+mygraph_test.pro: graph handling (test version)
+myicontour.pro: contour array with irregular grid
+mylevels.pro: contour levels generator
+myplot.pro: (nice) plot graphic
+mypmulti.pro: multiple windows handling
+myprint.pro: print graphic (depending on mygraph configuration)
+mywindow.pro: open new window
+myzeroaxis.pro: add zero axis to graph
+
+
+### toolbox_idl_lodca: analysis of LODCA model
+# ( no description, see Dewitte 2000 J.Climate for LODCA )
+backup_readhist.f
+lodcacomment.dat
+lodcaref.dat
+lodcaversion.dat
+mylodcacpdat.pro
+mylodcagethistory.pro
+mylodcagetparams.pro
+mylodcagetwind.pro
+mylodcaparams.pro
+mylodca.pro
+mylodcaputhistory.pro
+mylodcaputwind.pro
+mylodcaset.pro
+mylodcashow.pro
+mylodcaversion.pro
+mylodcaxyback.pro
+mylodcaxypart.pro
+
+
+### toolbox_idl_mvert: ocean vertical modes 
+# ( baroclinic and barotropic modes for non-uniform ocean stratification )
+myfntopn.pro: compute vertical mode projection coefficient
+myn2tomodes_diff.pro: compute stratification profile derivative
+myn2tomodes.pro: compute vertical modes from stratification profile (N^2)
+myn2tomodes_reconstruct.pro: reconstruct vertical modes
+myrhoseawater.pro: compute sea water density
+
+
+### toolbox_idl_ncdf: netcdf files handling
+# ( No additionnal toolbox is needed )
+myncdfcopyvar.pro: copy variable from one netcdf file to another
+myncdfgetatt.pro: read a ncdf attribute
+myncdfgetdim.pro: read a ncdf dimension
+myncdfgetdims.pro: read all ncdf dimensions
+myncdfgetvardims.pro: read all ncdf dimensions from a variable
+myncdfgetvar.pro: read a ncdf variable
+myncdfmakeatt.pro: write a ncdf attribute
+myncdfmakedim.pro: write a ncdf dimension
+myncdfmakefile.pro: write a ncdf empty file
+myncdfmakevar.pro: write a ncdf variable
+
+
+### toolbox_idl_oceano: ocean data manipulation
+# ( Requires toolbox_idl_base )
+detrend.pro: (see myatrend.pro)
+filter.pro: (see myfilter.pro)
+myaclim.pro: removes climatology from a field
+myamean.pro: removes mean from a field
+myatrend.pro: removes trend from a field
+myconvdegtokm.pro: conversion deg lon,lat to km
+myconvkmtolat.pro: conversion km to deg lat
+myconvkmtolon.pro: conversion km to deg lon
+myconvlattokm.pro: conversion deg lat to km
+myconvlontokm.pro: conversion deg lon to km
+mycorremap.pro: correlation map between two fields
+mycycle.pro: replicate field over time dimension cyclically
+myday.pro: field time-interpolation to increase number of time steps. 
+myderiv.pro: compute firs derivative
+myfilter.pro: lowpass-highpass-bandpass filtering of a time serie
+myhermite.pro: parabolic cylinder functions (for equatorial waves)
+myiday.pro: rearrange array field(X,month,day) to field(X,time)
+myimonth.pro: compute array monthly average
+myintegral.pro: compute integral
+myinterpol2d.pro:  2D array interpolation
+myinterpol.pro: 1D array interpolation
+myintmodulo.pro: division remainder within bounds
+myisofrommap.pro: compute iscontour line from 2D array 
+mylagco.pro: lag-correlation between two time series
+mylagmaxabs.pro: lag-correlation find max magnitude
+mylagmax.pro: lag-correlation find maximum
+mylagmin.pro: lag-correlation find minimum
+mymasscenter.pro: center of mass for 2D array
+mymean.pro: array mean (on last dimension)
+mymodulo.pro: division remainder
+mymonth.pro: field time-averaging to reduce number of time steps
+mynino3.pro: compute Nino3 index from SST field
+mynino4.pro: compute Nino3 index from SST field
+mypder3d.pro: partial derivative on 3D array
+myrms.pro: rms map of a field
+mysavgol.pro: filter for data smoothing 
+myspecter.pro: temporal spectrum
+mythermocline.pro: detect thermocline from ocean vertical profile
+mywindavg.pro: running time-mean
+mywindskew.pro: running time-skewness
+mywindvar.pro: running time-variance
+
+
+### toolbox_idl_stats: statistical analysis
+# ( Requires toolbox_idl_base )
+m1.pro: compute field 1st statistical moment
+m2.pro: compute field 2nd statistical moment
+m3.pro: compute field 3rd statistical moment
+m4.pro: compute field 4th statistical moment
+mean2.pro: compute 2D array mean (accepts bad values)
+mycorrelate.pro: compute correlation two arrays
+mycovariance.pro: compute covariance two arrays
+myeof.pro: Empirical Orthogonal Functions (EOF) data decomposition
+myhistogram.pro: histogram plot 
+mynewrandomn.pro: random number from gaussian distribution (fixed seed)
+mynewrandomu.pro: random number from uniform distribution (fixed seed)
+myrandomn.pro: random number from gaussian distribution 
+myrandomu.pro: random number from uniform distribution
+myregress.pro: compute regression
+myrunkurt.pro: running time-kurtosis
+myrunmean.pro: running time-mean
+myrunskew.pro: running time-skewness
+myrunvar.pro: running time-variance
+myskewness.pro: compute skewness
+mystddev.pro: compute field standard deviation
+mysvdcmap.pro: correlation maps from SVD
+mysvdcutoff.pro: cutoff SVD to first modes
+mysvdmodel.pro: reconstruct data from SVD modes
+mysvd.pro: SVD data decomposition (of two fields)
+myvariance.pro: compute field variance
+myvep2d.pro: eigenvectors from EOF/SVD
+rms.pro: comptute field rms
+var.pro: compute field variance
+
+
+### toolbox_idl_wavelets: wavelets analysis
+mywaveglobal.pro: global power graph
+mywavepower.pro: power spectrum graph
+mywavevar.pro: averages graph
+wavelet.pro: wavelet analysis computation (Terrence and Compo)
+wave_signif.pro: significance levels
+

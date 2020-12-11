@@ -1,0 +1,86 @@
+XXXXXXX Restart File for reading initial conditions  (filenames defini depuis le repertoire lodca, mais mieux vaut les definir depuis la racine !)
+XXXXXXX History File for writing restart conditions (can then be used as a Restart File)
+?? XXXXXXXXXXXXXXXXXXXXXXX This is a comment of lodca.dat where lines correspond (keyboard F11) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+?? XXXXXXXXXXX Only Variables with XXXXXXX need to be changed, and this is done and explained more in details in mylodca.pro !XXXXXXXXXXXXX
+-----Comment wind files
+XXXXXXX File for Wind Forcing: mensual(every 15th of month) or 10days (must always start on 15th !, then 25th,5th,...) depending on DTWIND
+-----Comment clim files
+XXXXXXX File for clim wind (UNIT ?)
+XXXXXXX File for wind divergence (not used, only for CZ model)
+XXXXXXX File for clim sst (UNIT?)(one vertical profile of clim temperature is set in ztmsuf.f l404)  
+XXXXXXX File for clim vertical velocity (UNIT?)at the base of mixed layer (estimate from dxu,dyv 50meters)
+XXXXXXX File for clim zonal and meridional currents (UNIT?)
+-----Comment statistical atmoshpere (SVD) files
+XXXXXXX File for standard deviation of PCs (UNIT?)
+XXXXXXX File for SST SVD modes (UNIT?)
+XXXXXXX File for zonal (and meridionnal) wind stress modes (UNIT?)
+-----Comment for other parameters
+XXXXXXX DNCDF=1 pour ecrire fichier netcdf run.c/std/output.nc, 0 pour ne pas ecrire
+XXXXXXX DTWIND=key 30 or 10 for mensual or 10-days wind (interpolated on 10 days anyway) in the wind forcing file
+D0WIND=Date at which wind forcing starts (yyyymmdd) (only for netcdf outputs, now useless)
+XXXXXXX T0WIND=Number of time steps to skip before reading wind file. Is in month so if 10days wind (DTWIND) skip is 3*T0WIND (always starts on a 15th)
+NSTART=2 (put 0 to start from null initial conditions, but never done)
+XXXXXXX TFIND= Time Step (months) to skip before reading restart file (0.5 starts at the beginning, BEWARE also involves the month used for climatology !
+XXXXXXX RUNTYPE= type of run, forced(F), nudged(N),coupled(C)
+NMODE= number of baroclinic modes used (keep 3)
+DRAGF= For other parameters description, see setup.f
+DRAGC= 
+LAYER1= 
+LAYER2=
+TSUBH= a way of scaling the thermocline feedback (see latter)
+NEWTSUB= 
+NEWATMO=1 pour nouveaux params atmosphere (a garder)  
+XXXXXXX NTMSTAT=1:atm statistique (rq UO,VO=vitesse vents non utilises), 0:atm Gill  
+MM     =  
+DRAG   =   
+REK    =  
+XXXXXXX PHI10  =  P1 first baroclinic mode (/150 boris convention) 
+XXXXXXX PHI20  =  P2 second baroclinic mode (/150 boris convention) 
+XXXXXXX PHI30  =  P3 third baroclinic mode (/150 boris convention) 
+XXXXXXX CWAVE1 =  Phase speed first baroclinic mode 
+XXXXXXX CWAVE2 =  Phase speed second baroclinic mode
+XXXXXXX CWAVE3 =  Phase speed third baroclinic mode
+XXXXXXX SCL1   =  Scln first baroclinic mode (units ?) 
+XXXXXXX SCL2   =  Scln second baroclinic mode (units ?)
+XXXXXXX SCL3   =  Scln third baroclinic mode (units ?)
+NX     = 
+NY     =  
+HEQUIV =  
+XXXXXXX TZERO  =  Initial time to give to History file (to keep same axis as restart, put TZERO=TFIND if NREWND=10, else match dates)
+XXXXXXX TENDD  =  Lenght of run is TENDD-TZERO
+DTD    =
+XWD    = 
+XED    =  
+YSD    = 
+YND    = 
+TDECA1 =  friction timescale (month) for first baroclinic mode (Dewitte2000=30)
+Q      =  power for friction power decrease among baroclinic mode (Dewitte2000=0.5)
+TPLMIN =  ??  
+TSTPRT =  ?? 
+CHKSUM =  ?? 
+NPRINT =  ??
+MASKW  =  ??
+MWNDGF =  ?? 
+WMXW   =  ?? 
+WMXE   =  ?? 
+WMYS   =  ?? 
+WMYN   =  ?? 
+PERIOD =  ??
+YNORTH =  ??
+       =   ?? 
+           ?? 
+       =   ?? 
+YSOUTH =  ?? 
+       =  ?? 
+          ?? 
+       =  ?? 
+XWEST  =  ?? 
+       =  ?? 
+          ?? 
+       =  ?? 
+NSEG   =  ?? 
+NTAPE  =  ?? 
+XXXXXXX NREWND =  11 to write in history file only last simulated time step, 10 to write everything (including initial conditions)
+NATM   =  Type of atmosphere (Gill ou SVD ??) 
+---------(Comment)
+suite non commentee....

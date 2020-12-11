@@ -1,0 +1,123 @@
+run.c/std/dummy-restart
+run.c/std/out-history
+paramf/betaf
+paramf/sclnz.5003centreopaf
+c - wind field
+data/txtysoda.84302x600
+c -------------- clim files
+climf/rcwindmn.daf
+climf/rcdivmn.daf
+climf/rcsstmn.daf
+climf/wem.bdf
+climf/uv.bdf
+c -------------- SVD files
+paramf/stddev.7dashf
+paramf/mapsst2720.7dashf
+paramf/maptau2720.7dashf
+c -----------------------
+DNCDF  =  0
+DTWIND =  30
+D0WIND =  00000115
+T0WIND =  0
+NSTART =  2 
+TFIND  =  0.5
+RUNTYPE=  F
+NMODE  =  3 
+DRAGF  =  1. 
+DRAGC  =  1. 
+LAYER1 =  150. 
+LAYER2 =  100. 
+TSUBH  =  1. 
+NEWTSUB=  1 
+NEWATMO=  1
+NTMSTAT=  1
+MM     =  2
+DRAG   =  1.  
+REK    =  2. 
+PHI10  =  .58 
+PHI20  =  .58 
+PHI30  =  .09 
+CWAVE1 =  2.7
+CWAVE2 =  1.6 
+CWAVE3 =  1.1 
+SCL1   =  0.7 
+SCL2   =  0.6 
+SCL3   =  0.55 
+NX     =  78 
+NY     =  115 
+HEQUIV =  86. 
+TZERO  =  0.5 
+TENDD  =  120.5
+DTD    =  .3333334 
+XWD    =  124. 
+XED    =  280. 
+YSD    =  -28.75 
+YND    =   28.75 
+TDECA1 =   30. 
+Q      =   0.5 
+TPLMIN =  48.  
+TSTPRT =  .false. 
+CHKSUM =  .false. 
+NPRINT =  3 
+MASKW  =  0 
+MWNDGF =  11 
+WMXW   =  -60. 
+WMXE   =   15. 
+WMYS   =  -30. 
+WMYN   =   30. 
+PERIOD =   1.D10 
+YNORTH =  28.75 
+       =   5.75 
+           5.75 
+       =   5.75 
+YSOUTH =  -28.75 
+       =  -14.75 
+          -14.75 
+       =  -14.75 
+XWEST  =  124. 
+       =  -15. 
+          10.0 
+       =  10.0 
+NSEG   =  1 
+NTAPE  =  1 
+NREWND =  11 
+NATM   =  2 
+Run 3 modes couple... 
+ALPHA  =  2.8 
+GAM1   =  1. 
+GAM2   =  1. 
+EPS    =  .3 
+BETA   =  .75 
+TDA1   =  28. 
+TDB1   =  1.25 
+TDA2   =  -40. 
+TDB2   =  3.0 
+TCUT   =  0. 
+TREV   =  0. 
+TCUT2  =  4. 
+TAMP1  =  0.25 
+TAMP2  =  2. 
+TLOSS  =  .975 
+CTOL   =  .15 
+IC2    =  0 
+JLEFT1 =  9 
+JRT1   =  21 
+JLEFT2 =  9 
+JRT2   =  16 
+ITOP1  =  5 
+IBOT1  =  26 
+ITOP2  =  5 
+IBOT2  =  26 
+NIC    =  0 
+I1S    =  1 
+I2S    =  1 
+I3S    =  1 
+I4S    =  1 
+I5S    =  1 
+I6S    =  1 
+I7S    =  1 
+IMIN   =  1 
+IMAX   =  2 
+ISTEP  =  .true. 
+NSTART =  -1 
+TFIND  =  100000000000. 
